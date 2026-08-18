@@ -1,1 +1,36 @@
-Nothing should be ignored in this case. The changes consist only of source files (.py, .md) and image files (.png), which should not be added to .gitignore according to the rules provided.
+```gitignore
+# Compiled Python files
+*.pyc
+__pycache__/
+
+# Virtual environments
+venv/
+.venv/
+.env
+.env.local
+*.env.*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# Build artifacts
+dist/
+build/
+target/
+
+# Dependencies cache
+node_modules/
+.mypy_cache/
+.pytest_cache/
+.coverage
+coverage/
+htmlcov/
+```
