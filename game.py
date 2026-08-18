@@ -198,7 +198,16 @@ class MM7Game:
     """Main game class - MM7 style with HoMM3 atmosphere."""
     
     def __init__(self):
-        self.app = Ursina()
+        # Check for display availability
+        import os
+        has_display = bool(os.environ.get('DISPLAY')) or os.name == 'nt'
+        
+        if not has_display:
+            print("WARNING: No display detected. Running in headless mode.")
+            print("Sprites and textures are generated but cannot be displayed.")
+            print("Copy this project to a machine with a GUI to play.")
+        
+        self.app = Ursina(borderless=False, fullscreen=False, resolution=(1280, 720))
         self.title = "MM7 Clone - HoMM3 Style"
         self.window.borderless = False
         self.window.fullscreen = False

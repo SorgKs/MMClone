@@ -35,6 +35,14 @@ pip install -e .
 python game.py
 ```
 
+## Important Note
+
+**This game requires a graphical display to run.** If you're running on a headless server or in an environment without X11/display support, the game will generate all assets but won't be able to open a window.
+
+To play the game, you need:
+- A machine with a graphical desktop environment (Windows, macOS, or Linux with X11)
+- Proper graphics drivers installed
+
 ## Requirements
 
 - Python >= 3.11
