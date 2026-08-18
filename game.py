@@ -207,11 +207,7 @@ class MM7Game:
             print("Sprites and textures are generated but cannot be displayed.")
             print("Copy this project to a machine with a GUI to play.")
         
-        self.app = Ursina(borderless=False, fullscreen=False, resolution=(1280, 720))
-        self.app.title = "MM7 Clone - HoMM3 Style"
-        self.app.window.borderless = False
-        self.app.window.fullscreen = False
-        self.app.window.resolution = (1280, 720)
+        self.app = Ursina(borderless=False, fullscreen=False, resolution=(1280, 720), title="MM7 Clone - HoMM3 Style")
         
         # Generate assets
         print("Generating assets...")
